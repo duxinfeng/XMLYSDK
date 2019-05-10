@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XimalayaSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "XimalayaSDK."
 
   s.description  = "喜马拉雅开放平台SDK."
@@ -32,16 +32,6 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'SDK/include/Downloader/**/*.h'
   end
 
-  s.subspec 'FMDB' do |ss|
-    ss.source_files = 'SDK/include/FMDB/**/*.{h,m}'
-    ss.public_header_files = 'SDK/include/FMDB/**/*.h'
-  end
-
-  s.subspec 'MBProgressHUD' do |ss|
-    ss.source_files = 'SDK/include/MBProgressHUD/**/*.{h,m}'
-    ss.public_header_files = 'SDK/include/MBProgressHUD/**/*.h'
-  end
-
   s.subspec 'Player' do |ss|
     ss.source_files = 'SDK/include/Player/**/*.{h,m}'
     ss.public_header_files = 'SDK/include/Player/**/*.h'
@@ -62,6 +52,10 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'SDK/include/Utility/**/*.h'
   end
 
-  s.frameworks = "CoreMedia", "SystemConfiguration","CoreImage","CoreTelephony","CoreMIDI","MediaToolbox","AudioToolbox","Metal"
+  s.compiler_flags = '-ObjC'
+  s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'Foundation', 'UIKit'
+  s.libraries = 'z.1', 'sqlite3'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'FMDB'
 
 end
