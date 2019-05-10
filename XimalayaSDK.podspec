@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XimalayaSDK"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "XimalayaSDK."
 
   s.description  = "喜马拉雅开放平台SDK."
@@ -11,7 +11,9 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.author       = { "Xinfeng Du" => "duxinfeng99@gmail.com" }
+  s.author       = { "duxinfeng" => "duxinfeng99@gmail.com" }
+  
+  s.social_media_url = "http://twitter.com/iduxinfeng"
 
   s.ios.deployment_target = "8.0"
 
