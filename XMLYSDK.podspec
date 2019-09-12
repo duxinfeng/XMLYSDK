@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XMLYSDK"
-  s.version      = "0.0.4"
+  s.version      = "1.0.0"
   s.summary      = "XMLYSDK"
 
   s.description  = "喜马拉雅开放平台SDK."

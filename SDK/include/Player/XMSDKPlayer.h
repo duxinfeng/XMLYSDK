@@ -55,6 +55,8 @@ typedef NS_ENUM(NSInteger, XMSDKLivePlayerState) {
 #pragma mark - player state change
 //播放列表结束时被调用
 - (void)XMTrackPlayerDidPlaylistEnd;
+//开始播放时调用
+- (void)XMTrackPlayerDidStart;
 //将要播放时被调用
 - (void)XMTrackPlayerWillPlaying;
 //已经播放时被调用

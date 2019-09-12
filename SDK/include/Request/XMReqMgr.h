@@ -66,6 +66,8 @@ typedef void (^XMRequestHandler)(id result,XMErrorModel *error);
 //设为YES即仍旧使用HTTP请求api.ximalaya.com(默认使用HTTPS)
 @property (nonatomic,assign) BOOL usingHttpWhenRequestApiDomain;
 
+@property (nonatomic, assign) BOOL enableDeviceIdHashMode;
+
 + (XMReqMgr *)sharedInstance;
 
 + (NSString *)version;
