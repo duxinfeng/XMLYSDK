@@ -94,6 +94,17 @@ typedef void (^XMRequestHandler)(id result,XMErrorModel *error);
  */
 - (void)requestXMData:(XMReqType)reqType params:(NSDictionary*)params withCompletionHander:(XMRequestHandler)reqHandler;
 
+/**
+*  请求喜马拉雅的内容扩展接口 - 在请求类型不包含所需请求的接口时使用
+*
+*  @param path    必填，请求路径，例如@"business/category"
+*
+*  @param params  必填，请求参数字典
+*
+*  @param reqHandler 必填，请求完成后的回调block
+*/
+- (void)requestXMDataWithPath:(NSString *)path params:(NSDictionary*)params completionHandler:(XMRequestHandler)reqHandler;
+
 - (void)postDataToXMSvr:(NSInteger)reqType params:(NSDictionary*)params withCompletionHander:(XMRequestHandler)reqHandler;
 
 /**
